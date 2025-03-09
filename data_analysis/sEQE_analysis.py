@@ -16,12 +16,12 @@ eV = 1.6021766208e-19  # Electron volt (J)
 q = 1.6021766208e-19  # Elementary charge (C)
 
 # Load EQE data
-EQE_data = pd.read_csv(r"C:\Users\José\OneDrive\Documents\KAUST\Post Doc\Colabs\Anirudh\Exported EQEpv\Sample9Pixel5.csv")
+EQE_data = pd.read_csv(r"add EQE data File")
 EQE_data.columns = ['WAVELENGTH', 'EQE']
 EQE_data = EQE_data.astype(float)
 
 # Load AM 1.5 Data
-AM_data = pd.read_csv(r"C:\Users\José\iCloudDrive\Documents\KAUST\Post Doc\sEQE\AM1.5G.csv", sep=';')
+AM_data = pd.read_csv(r"add AM 1.5 data file here", sep=';')
 AM_data['WAVELENGTH1'] = pd.to_numeric(AM_data['Wavelength (nm)'].str.replace(',', '.'))
 AM_data['AM 1.5 G'] = pd.to_numeric(AM_data['Global tilt  W*m-2*nm-1'].str.replace(',', '.'))
 AM_data = AM_data[['WAVELENGTH1', 'AM 1.5 G']].astype(float)
